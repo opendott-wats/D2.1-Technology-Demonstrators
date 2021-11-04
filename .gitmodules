@@ -1,6 +1,9 @@
-[submodule "code/NFC/Configurable NFC Tags/GroveNFC Tag"]
-	path = code/training/Configurable NFC Tags/GroveNFC Tag
-	url = https://github.com/jens-a-e/GroveNFC-Tag.git
-[submodule "code/training/NFC2Serial"]
-	path = code/training/NFC2Serial
+[submodule "training/NFC2Serial"]
+	path = training/NFC2Serial
 	url = https://github.com/jens-a-e/NFC2Serial.git
+[submodule "training/GroveNFC-Tag"]
+	path = training/GroveNFC-Tag
+	url = https://github.com/jens-a-e/GroveNFC-Tag.git
+[submodule "explorations/LoRa/LoraSendAndReceive_TTN_OpenDoTT_Test"]
+	path = explorations/LoRa/LoraSendAndReceive_TTN_OpenDoTT_Test
+	url = https://github.com/jens-a-e/LoraSendAndReceive_TTN_OpenDoTT_Test.git
