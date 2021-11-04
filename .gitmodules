@@ -1,6 +1,6 @@
 [submodule "code/NFC/Configurable NFC Tags/GroveNFC Tag"]
-	path = code/NFC/Configurable NFC Tags/GroveNFC Tag
+	path = code/training/Configurable NFC Tags/GroveNFC Tag
 	url = https://github.com/jens-a-e/GroveNFC-Tag.git
 [submodule "code/NFC/NFC2Serial"]
-	path = code/NFC/NFC2Serial
+	path = code/training/NFC2Serial
 	url = https://github.com/jens-a-e/NFC2Serial.git
