@@ -1,5 +1,7 @@
 # Technology Explorations / Demonstrations
 
+![](pictures/2021-05-04_14-21-46-000❤️.jpg)
+
 This project explores open technologies in IoT for wearables as part of research activities investigating wearable Internet of Things and the Self within the [Open Design of trusted Things - OpenDoTT](https://opendott.org.) project.
 
 # Repository Contents
