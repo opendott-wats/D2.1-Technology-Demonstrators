@@ -7,3 +7,6 @@
 [submodule "explorations/LoRa/LoraSendAndReceive_TTN_OpenDoTT_Test"]
 	path = explorations/LoRa/LoraSendAndReceive_TTN_OpenDoTT_Test
 	url = https://github.com/jens-a-e/LoraSendAndReceive_TTN_OpenDoTT_Test.git
+[submodule "training/nodered-opendott-training"]
+	path = training/nodered-opendott-training
+	url = https://github.com/jens-a-e/nodered-opendott-training.git
