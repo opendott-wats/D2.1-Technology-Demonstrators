@@ -1,13 +1,13 @@
 # Technology Explorations / Demonstrations
 
-This project explores open technologies in IoT for wearables as part of research activities investigating wearable Internet of Things and the Self within [OpenDoTT](https://opendott.org.).
+This project explores open technologies in IoT for wearables as part of research activities investigating wearable Internet of Things and the Self within the [Open Design of trusted Things - OpenDoTT](https://opendott.org.) project.
 
 # Repository Contents
 
 The repository contains code and documentation of two larger activities in exploring potentials and possiblities of open technology for sketching and protoyping for wearable IoT.
 ## Open Technology Training
 
-Under the `/code/training` directory you can find code snippets and sketches as well as external examples used in and/or written during the Open Technology Traning as far as captured and significantly extended.
+Under `/training` directory you can find code snippets and sketches as well as external examples used in and/or written during the Open Technology Traning as far as captured and significantly extended.
 
 ## Explorations on making a wearable IoT piece
 
@@ -20,17 +20,11 @@ Extending the traingin explorations on building a working peice of wearable IoT 
     - pictures of wired up SD Card holder
   - step tracker 2 (extensive work on this one)
     - trying harder on the firmware implementation to sustainably record data
-    - [ ] Gather Screenshots
   - seeed step counter testbed (to test the sensor)
 - Sketches for new design probes
   - the listeing thing (but only boiler plate code, abandonned)
   - the sonic reminder (MIDI prof of function)
     - later continued as the MIDIThing with Circuit Python
-
-Code and libraries I have tried out and need to link
-
-- [ ] iOS BlueCap Example
-- [ ] C-Step-Counter
 
 # Licenses
 
