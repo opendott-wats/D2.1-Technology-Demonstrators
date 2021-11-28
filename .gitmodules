@@ -10,3 +10,6 @@
 [submodule "training/nodered-opendott-training"]
 	path = training/nodered-opendott-training
 	url = https://github.com/jens-a-e/nodered-opendott-training.git
+[submodule "explorations/the-other-things"]
+	path = explorations/the-other-things
+	url = https://github.com/jens-a-e/the-other-things.git
