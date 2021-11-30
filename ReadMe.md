@@ -4,6 +4,8 @@
 
 This project explores open technologies in IoT for wearables as part of research activities investigating wearable Internet of Things and the Self within the [Open Design of trusted Things - OpenDoTT](https://opendott.org.) project.
 
+The content of this repository can also be found online under: https://github.com/opendott-wats/D2.1-Technology-Demonstrators
+
 # Repository Contents
 
 The repository contains code and documentation of two larger activities in exploring potentials and possiblities of open technology for sketching and protoyping for wearable IoT.
