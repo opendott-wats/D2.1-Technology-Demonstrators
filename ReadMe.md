@@ -13,21 +13,18 @@ Under `/training` directory you can find code snippets and sketches as well as e
 
 ## Explorations on making a wearable IoT piece
 
-Extending the traingin explorations on building a working peice of wearable IoT were made.
+Extending the training explorations on building a working piece of wearable IoT were made.
 
-- [Testing LoRaWAN connectivity and capability](code/explorations/LoraSendAndReceive_TTN_OpenDoTT_Test)
-
+- [Testing LoRaWAN connectivity and capability](explorations/LoRa/LoraSendAndReceive_TTN_OpenDoTT_Test)
 - Making a Step Tracker
   - Steps to SDCard (a simple logger)
-    - pictures of wired up SD Card holder
   - step tracker 2 (extensive work on this one)
-    - trying harder on the firmware implementation to sustainably record data
   - seeed step counter testbed (to test the sensor)
 - Sketches for new design probes
   - the listeing thing (but only boiler plate code, abandonned)
   - the sonic reminder (MIDI prof of function)
     - later continued as the MIDIThing with Circuit Python
-
+- **/explorations/the-drawing-things** contains [p5js](https://p5js.org) skteches on creating "ink" from recorded step data
 # Licenses
 
 Source code newly written by the researcher in this repository is licensed under
