@@ -1,2 +1,5 @@
+# Some default folder which should not be tracked with Git
 **/node_modules
 **/.vscode
+# For the build artifacts
+*.zip
