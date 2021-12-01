@@ -5,6 +5,7 @@ TARGET_NAME := "D2.1 Technology Demontrators"
 HTML := $(patsubst %.md,index.html, $(SOURCE))
 PDF := $(patsubst %.md,%.pdf, $(SOURCE))
 DOCX := $(patsubst %.md,%.docx, $(SOURCE))
+ARCHIVE := $(TARGET_NAME).zip
 
 # STYLE := _pandoc/pandoc.css
 # Source: https://gist.github.com/killercup/5917178
@@ -15,13 +16,13 @@ OPTS :=  --from=markdown+smart+simple_tables+table_captions+yaml_metadata_block+
 ARGS := \
 	--filter pandoc-crossref \
 	--citeproc \
-	--csl=.styles/acm-sig-proceedings-long-author-list.csl \
-	--toc
+	--csl=.styles/acm-sig-proceedings-long-author-list.csl
+	# --toc
 
 .PHONY : archive
 archive:
-	git archive -o $(TARGET_NAME).zip HEAD
-	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru $(TARGET_NAME).zip "$$sm_path"'
+	git archive -o $(ARCHIVE) HEAD
+	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru $(ARCHIVE) "$$sm_path"'
 
 .PHONY : info
 info:
@@ -29,8 +30,8 @@ info:
 	@echo $(SOURCE)
 	@echo --- Output ---
 	@echo $(PDF)
-	@echo $(PDF)
-	@echo $(PDF)
+	@echo $(HTML)
+	@echo $(DOCX)
 
 
 .PHONY : watch
@@ -51,6 +52,7 @@ $(HTML) : $(SOURCE)
 		--mathjax \
 		--metadata link-citations=true \
 		--metadata linkReferences=true \
+		--metadata title="$(TARGET_NAME)" \
 		-o $@ $<
 
 .PHONY : pdf
@@ -61,8 +63,12 @@ $(PDF) : $(SOURCE)
 		--shift-heading-level-by=0 \
 		--default-image-extension=pdf \
 		-V papersize:a4 \
+		-V colorlinks=true \
+		-V linkcolor=blue \
+		-V urlcolor=red \
+		-V toccolor=gray \
 		--pdf-engine xelatex \
-		-o $@ $<
+		-o $(TARGET_NAME).pdf $<
 
 .PHONY : doc
 doc: $(DOCX)
@@ -71,9 +77,8 @@ $(DOCX) : $(SOURCE)
 	@pandoc $(OPTS) $(ARGS) -w docx \
 		--katex \
 		--default-image-extension=png \
-		--reference-doc=_pandoc/base.docx \
-		-o $@ $<
-
+		-o $(TARGET_NAME).docx $<
+# --reference-doc=_pandoc/base.docx
 
 .PHONY : clean
 clean :
