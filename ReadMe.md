@@ -9,6 +9,7 @@ The content of this repository can also be found online under: https://github.co
 # Repository Contents
 
 The repository contains code and documentation of two larger activities in exploring potentials and possiblities of open technology for sketching and protoyping for wearable IoT.
+
 ## Open Technology Training
 
 Under `/training` directory you can find code snippets and sketches as well as external examples used in and/or written during the Open Technology Traning as far as captured and significantly extended.
