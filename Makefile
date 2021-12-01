@@ -15,8 +15,8 @@ OPTS :=  --from=markdown+smart+simple_tables+table_captions+yaml_metadata_block+
 
 ARGS := \
 	--filter pandoc-crossref \
-	--citeproc \
-	--csl=.styles/acm-sig-proceedings-long-author-list.csl
+	--citeproc
+	# --csl=.styles/acm-sig-proceedings-long-author-list.csl
 	# --toc
 
 .PHONY : archive
@@ -84,3 +84,4 @@ $(DOCX) : $(SOURCE)
 clean :
 	@echo --- Deleting generated files ---
 	@-rm $(HTML) $(PDF) $(DOCX)
+
