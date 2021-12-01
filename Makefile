@@ -26,7 +26,7 @@ ARGS := \
 archive: $(ARCHIVE)
 $(ARCHIVE) : .*
 	git archive -o $(ARCHIVE) HEAD
-	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru $(ARCHIVE) "$$sm_path"'
+	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru --exclude=*.git* $(ARCHIVE) "$$sm_path"'
 
 .PHONY : info
 info:
