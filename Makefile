@@ -1,7 +1,9 @@
 # Make sure you change the filename from Paper.md to something meaningful.
-TARGET_NAME := D2.1-Technology-Demontrators
-
+TITLE := D2.1 Technology Demonstrators
 SOURCE := ReadMe.md
+
+# Replace all spaces with - to make it path safe
+TARGET_NAME := $(subst $() $(),-,$(TITLE))
 
 HTML :=  index.html #$(patsubst %.md,index.html, $(SOURCE))
 PDF := $(TARGET_NAME).pdf #$(patsubst %.md,%.pdf, $(SOURCE))
@@ -70,6 +72,7 @@ $(PDF) : $(SOURCE)
 		-V urlcolor=red \
 		-V toccolor=gray \
 		--pdf-engine xelatex \
+		--metadata title=$(TARGET_NAME) \
 		-o $@ $<
 
 .PHONY : doc
@@ -79,6 +82,7 @@ $(DOCX) : $(SOURCE)
 	@pandoc $(OPTS) $(ARGS) -w docx \
 		--katex \
 		--default-image-extension=png \
+		--metadata title=$(TARGET_NAME) \
 		-o $@ $<
 # --reference-doc=_pandoc/base.docx
 
