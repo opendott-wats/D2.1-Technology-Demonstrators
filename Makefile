@@ -56,7 +56,6 @@ $(HTML) : $(SOURCE)
 		--mathjax \
 		--metadata link-citations=true \
 		--metadata linkReferences=true \
-		--metadata title=$(TITLE) \
 		-o $@ $<
 
 .PHONY : pdf
@@ -72,7 +71,6 @@ $(PDF) : $(SOURCE)
 		-V urlcolor=red \
 		-V toccolor=gray \
 		--pdf-engine xelatex \
-		--metadata title=$(TITLE) \
 		-o $@ $<
 
 .PHONY : doc
@@ -82,7 +80,6 @@ $(DOCX) : $(SOURCE)
 	@pandoc $(OPTS) $(ARGS) -w docx \
 		--katex \
 		--default-image-extension=png \
-		--metadata title=$(TITLE) \
 		-o $@ $<
 # --reference-doc=_pandoc/base.docx
 

@@ -1,3 +1,8 @@
+---
+title: D2.1 Technology Demonstrators
+subtitle: Open Hardware Training and Explorations
+author: Jens Alexander Ewald (ESR1)
+---
 # Technology Explorations / Demonstrations
 
 ![](pictures/2021-05-04_14-21-46-000❤️.jpg)
@@ -6,6 +11,7 @@ This project explores open technologies in IoT for wearables as part of research
 
 The content of this repository can also be found online under: https://github.com/opendott-wats/D2.1-Technology-Demonstrators
 
+
 # Repository Contents
 
 The repository contains code and documentation of two larger activities in exploring potentials and possiblities of open technology for sketching and protoyping for wearable IoT.
@@ -13,6 +19,7 @@ The repository contains code and documentation of two larger activities in explo
 ## Open Technology Training
 
 Under `/training` directory you can find code snippets and sketches as well as external examples used in and/or written during the Open Technology Traning as far as captured and significantly extended.
+
 
 ## Explorations on making a wearable IoT piece
 
@@ -28,6 +35,8 @@ Extending the training explorations on building a working piece of wearable IoT 
   - the sonic reminder (MIDI prof of function)
     - later continued as the MIDIThing with Circuit Python
 - **/explorations/the-drawing-things** contains [p5js](https://p5js.org) skteches on creating "ink" from recorded step data
+
+
 # Licenses
 
 Source code newly written by the researcher in this repository is licensed under
