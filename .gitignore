@@ -4,4 +4,5 @@
 # For the build artifacts
 *.zip
 *.docx
-
+*.pdf
+index.html

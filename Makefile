@@ -1,10 +1,11 @@
 # Make sure you change the filename from Paper.md to something meaningful.
-SOURCE := ReadMe.md
-TARGET_NAME := "D2.1 Technology Demontrators"
+TARGET_NAME := D2.1-Technology-Demontrators
 
-HTML := $(patsubst %.md,index.html, $(SOURCE))
-PDF := $(patsubst %.md,%.pdf, $(SOURCE))
-DOCX := $(patsubst %.md,%.docx, $(SOURCE))
+SOURCE := ReadMe.md
+
+HTML :=  index.html #$(patsubst %.md,index.html, $(SOURCE))
+PDF := $(TARGET_NAME).pdf #$(patsubst %.md,%.pdf, $(SOURCE))
+DOCX := $(TARGET_NAME).docx #$(patsubst %.md,%.docx, $(SOURCE))
 ARCHIVE := $(TARGET_NAME).zip
 
 # STYLE := _pandoc/pandoc.css
@@ -16,11 +17,12 @@ OPTS :=  --from=markdown+smart+simple_tables+table_captions+yaml_metadata_block+
 ARGS := \
 	--filter pandoc-crossref \
 	--citeproc
-	# --csl=.styles/acm-sig-proceedings-long-author-list.csl
+	# --csl=.styles/acm-sig-proceedings-long-author-list.csl \
 	# --toc
 
 .PHONY : archive
-archive:
+archive: $(ARCHIVE)
+$(ARCHIVE) : .*
 	git archive -o $(ARCHIVE) HEAD
 	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru $(ARCHIVE) "$$sm_path"'
 
@@ -40,7 +42,7 @@ watch:
 	@ls *.md | entr make acm
 
 .PHONY : all
-all : $(HTML) $(PDF) $(DOCX)
+all : $(HTML) $(PDF) $(DOCX) $(ARCHIVE)
 
 .PHONY : html
 html: $(HTML)
@@ -52,7 +54,7 @@ $(HTML) : $(SOURCE)
 		--mathjax \
 		--metadata link-citations=true \
 		--metadata linkReferences=true \
-		--metadata title="$(TARGET_NAME)" \
+		--metadata title=$(TARGET_NAME) \
 		-o $@ $<
 
 .PHONY : pdf
@@ -68,7 +70,7 @@ $(PDF) : $(SOURCE)
 		-V urlcolor=red \
 		-V toccolor=gray \
 		--pdf-engine xelatex \
-		-o $(TARGET_NAME).pdf $<
+		-o $@ $<
 
 .PHONY : doc
 doc: $(DOCX)
@@ -77,11 +79,10 @@ $(DOCX) : $(SOURCE)
 	@pandoc $(OPTS) $(ARGS) -w docx \
 		--katex \
 		--default-image-extension=png \
-		-o $(TARGET_NAME).docx $<
+		-o $@ $<
 # --reference-doc=_pandoc/base.docx
 
 .PHONY : clean
 clean :
 	@echo --- Deleting generated files ---
-	@-rm $(HTML) $(PDF) $(DOCX)
-
+	@-rm $(HTML) $(PDF) $(DOCX) $(ARCHIVE)
