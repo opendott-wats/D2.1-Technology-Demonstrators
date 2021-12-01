@@ -1,7 +1,8 @@
 ---
 title: D2.1 Technology Demonstrators
 subtitle: Open Hardware Training and Explorations
-author: Jens Alexander Ewald (ESR1)
+author:
+- Jens Alexander Ewald (ESR1)
 ---
 # Technology Explorations / Demonstrations
 
