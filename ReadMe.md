@@ -52,7 +52,7 @@ Any other original content is licensed under a [Creative Commons Attribution-Sha
 
 Doctoral Researcher: [Jens Alexander Ewald](mailto:jens.a.ewald@northumbria.ac.uk)
 
-Supervisors: Jayne Wallace (University of Northumbria, Newcastle upon Tyne), Mel Woods (University of Dundee), Mehan Jayasuriya (Mozilla Foundation), Davide Gomba (Officine Innesto)
+Supervisors: Jayne Wallace (University of Northumbria, Newcastle upon Tyne), Mel Woods (University of Dundee), Mehan Jayasuriya (Mozilla Foundation), Max von Grafenstein (UdK Berlin), Davide Gomba (Officine Innesto)
 
 
 🇪🇺 This project is part of [Open Design of Trusted Things (OpenDoTT) doctoral training network](https://opendott.org.) and has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 813508.
