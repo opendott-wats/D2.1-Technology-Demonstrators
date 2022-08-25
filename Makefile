@@ -51,7 +51,7 @@ html: $(HTML)
 $(HTML) : $(SOURCE)
 	@echo --- Generating HTML ---
 	@pandoc $(OPTS)+ascii_identifiers $(ARGS) -s -w html \
-		--self-contained \
+		--embed-resources --standalone \
 		--default-image-extension=png \
 		--mathjax \
 		--metadata link-citations=true \
@@ -70,6 +70,7 @@ $(PDF) : $(SOURCE)
 		-V linkcolor=blue \
 		-V urlcolor=red \
 		-V toccolor=gray \
+		-V documentclass=article \
 		--pdf-engine xelatex \
 		-o $@ $<
 
