@@ -27,6 +27,8 @@ archive: $(ARCHIVE)
 $(ARCHIVE) : .*
 	git archive -o $(ARCHIVE) HEAD
 	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru --exclude=*.git* $(ARCHIVE) "$$sm_path"'
+	zip -ru $(ARCHIVE) D2.1-Technology-Demonstrators.docx
+	zip -ru $(ARCHIVE) D2.1-Technology-Demonstrators.pdf
 
 .PHONY : info
 info:
@@ -63,14 +65,15 @@ pdf : $(PDF)
 $(PDF) : $(SOURCE)
 	@echo --- Generating PDF ---
 	@pandoc $(OPTS)+raw_tex $(ARGS) -t pdf \
-		--shift-heading-level-by=0 \
+		--shift-heading-level-by=-1 \
 		--default-image-extension=pdf \
-		-V papersize:a4 \
 		-V colorlinks=true \
 		-V linkcolor=blue \
-		-V urlcolor=red \
+		-V urlcolor=blue \
 		-V toccolor=gray \
 		-V documentclass=article \
+		-V papersize:a4 \
+		-V geometry:a4paper \
 		--pdf-engine xelatex \
 		-o $@ $<
 
