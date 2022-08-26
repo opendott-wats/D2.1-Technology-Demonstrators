@@ -3,11 +3,11 @@ TITLE := D2.1 Technology Demonstrators
 SOURCE := ReadMe.md
 
 # Replace all spaces with - to make it path safe
-TARGET_NAME := $(subst $() $(),-,$(TITLE))
+TARGET_NAME := docs/$(subst $() $(),-,$(TITLE))
 
-HTML :=  index.html #$(patsubst %.md,index.html, $(SOURCE))
-PDF := $(TARGET_NAME).pdf #$(patsubst %.md,%.pdf, $(SOURCE))
-DOCX := $(TARGET_NAME).docx #$(patsubst %.md,%.docx, $(SOURCE))
+HTML :=  docs/index.html
+PDF := $(TARGET_NAME).pdf
+DOCX := $(TARGET_NAME).docx
 ARCHIVE := $(TARGET_NAME).zip
 
 # STYLE := _pandoc/pandoc.css
