@@ -1,11 +1,11 @@
 # Some default folder which should not be tracked with Git
 **/node_modules
 **/.vscode
-# Build artifacts
+# Avoid adding zips
 *.zip
-!docs/*.zip
 # Temp Word files
 ~*.docx
+# Generated documentation
 *.docx
 !docs/*.docx
 *.pdf
