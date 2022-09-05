@@ -29,6 +29,8 @@ The aim of the training and explorations is to gain experience with open technol
 
 ## Open Technology Training
 
+![Assembling Open Technology components for sketching with sensors and GPS](pictures/2021-05-04_14-18-53-000.jpg)
+
 The `/training` directory contains sketches as well as external examples used in and/or written during the Open Technology Training. The training aimed to provide a foundation for further explorations particular to each OpenDoTT area (body/self, home, communities and neighborhoods, smart city, and a trust mark for IoT).
 Additionally, through individual training sessions I was able to explore LoRaWAN technology (low range wide area network). Details can be found in the relevant project directories' README files.
 
@@ -38,13 +40,22 @@ The `/explorations` directory contains code sketches documenting my thinking thr
 
 The different projects/sketches build in part on the training insights building a working piece of wearable IoT.
 
+![Piecing together sensor components for a LoRaWAN enabled wearable step tracker with GPS, using a hat to facilitate sketching wearability](pictures/2021-05-04_14-19-05-000.jpg)
+
 `/explorations/LoRa/` contain a simple LoRaWAN test sketch which enabled me to experience and explore the viability of this firstly intriguing connectivity topology. The place where I have resided during this time had LoRaWAN coverage through [The Things Network](https://www.thethingsnetwork.org/). This was particularly insightful as it showed that real world sizes of payloads are indeed minimal and low in spectrum sharing capacity, which makes it nearly unsuitable for sketching in research through design and thinking through making scenarios.
+
+![Sketching "data to ink" algorithms in p5js](explorations/the-drawing-things/screenshots/Screenshot%202021-11-30%20at%2016.43.53.png)
 
 `/explorations/the-drawing-things` contains code sketches which use statically exported step count data (from the researcher's phone) to explore different modes of making this data available in an interactive drawing process (generating "ink" from body related data). This approach of "drawing with data" as a semi-automatic tangible reflective non-verbal conversation with data of our bodies is preliminary work to the prototype "The Drawing Thing" which is also deployed with participant as part of WP2. For easy sharing of iterations sketches use web based technology and for code accessibility they build on the popular and openly available [p5js](https://p5js.org) platform.
 
-`/explorations/the-other-things` contains firmware studies in building a step count tracker myself using open(-ly available) technologies. The sketches use the well known open platform Arduino as well as explore the Circuit Python platform with the benefit of distributing firmware updates as simple files which participants can drag and drop on the devices connected through USB on their own machines. This option was considered to enable remote studies, which are common during the Covid-19 pandemic.
-The main insight from these explorations is that making a device which is accurate enough as well as sufficiently compact and concise in footprint is a challenge which is time-consuming, less design related, and already solved by industry products. The latter have the disadvantage of not being open (in the sense of open technology), for which we suggest approaching them through "uncrafting" (Murer et al.), shifting "open" technology to "opening technology". Alternatively, ready-made products have the advantage to be familiar to participants which could potentially benefit primary focus on relationships to data.
+![(Re-)using am SD adapter directly soldered to jumper wires, instead of an open hardware component](explorations/the-other-things/pictures/2021-02-25_20-10-35-461.jpg)
 
+`/explorations/the-other-things` contains firmware studies in building a step count tracker myself using open(-ly available) technologies (i.e. re-using an SD card adapter as a prototyping component). The sketches use the well known open platform Arduino as well as explore the Circuit Python platform with the benefit of distributing firmware updates as simple files which participants can drag and drop on the devices connected through USB on their own machines. This option was considered to enable remote studies, which are common during the Covid-19 pandemic.
+The main insight from these explorations is that making a device which is accurate enough as well as sufficiently compact and concise in footprint is a challenge which is time-consuming, less design related, and already solved by industry products. The latter have the disadvantage of not being open (in the sense of open technology), for which we suggest approaching them through "uncrafting" (Murer et al. 2015), shifting "open" technology to "opening technology". Alternatively, ready-made products have the advantage to be familiar to participants which could potentially benefit primary focus on relationships to data.
+
+## References
+
+Murer, M., Vallgårda, A., Jacobsson, M., & Tscheligi, M. (2015). Un-Crafting: Exploring Tangible Practices for Deconstruction in Interactive System Design. Proceedings of the Ninth International Conference on Tangible, Embedded, and Embodied Interaction, 469–472. https://doi.org/10.1145/2677199.2683582
 ## Licenses
 
 Source code newly written by the researcher in this repository is licensed under
