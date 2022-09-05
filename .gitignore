@@ -5,10 +5,3 @@
 *.zip
 # Temp Word files
 ~*.docx
-# Generated documentation
-*.docx
-!docs/*.docx
-*.pdf
-!docs/*.pdf
-index.html
-!docs/index.html

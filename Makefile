@@ -3,9 +3,9 @@ TITLE := D2.1 Technology Demonstrators
 SOURCE := ReadMe.md
 
 # Replace all spaces with - to make it path safe
-TARGET_NAME := docs/$(subst $() $(),-,$(TITLE))
+TARGET_NAME := $(subst $() $(),-,$(TITLE))
 
-HTML :=  docs/index.html
+HTML :=  index.html
 PDF := $(TARGET_NAME).pdf
 DOCX := $(TARGET_NAME).docx
 ARCHIVE := $(TARGET_NAME).zip
