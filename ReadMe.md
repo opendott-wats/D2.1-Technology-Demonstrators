@@ -23,7 +23,7 @@ The aim of the training and explorations is to gain experience with open technol
 - How to make a wearable using readily available open technology hardware and software?
 - How to make an open technology wearable IoT connecting directly to the internet?
 - What data/sensors in relation to the body and the self are meaningful for a craft/creative technologist approach?
-- How can craft tech practice engage in open technology?
+- How can craft technologist practice engage with open technology?
 - What challenges emerge when approaching open technology through craft technologist practice?
 - In which ways can the notion of "open" manifest when exploring digital technology in relation to the body?
 
