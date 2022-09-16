@@ -8,7 +8,7 @@ TARGET_NAME := $(subst $() $(),-,$(TITLE))
 HTML :=  index.html
 PDF := $(TARGET_NAME).pdf
 DOCX := $(TARGET_NAME).docx
-ARCHIVE := $(TARGET_NAME).zip
+ARCHIVE := $(TARGET_NAME)-ESR1.zip
 
 # STYLE := _pandoc/pandoc.css
 # Source: https://gist.github.com/killercup/5917178
@@ -23,12 +23,15 @@ ARGS := \
 	# --toc
 
 .PHONY : archive
-archive: $(ARCHIVE)
+git-archive: $(ARCHIVE)
 $(ARCHIVE) : .*
 	git archive -o $(ARCHIVE) HEAD
 	git submodule --quiet foreach 'cd "$$toplevel"; zip -ru --exclude=*.git* $(ARCHIVE) "$$sm_path"'
-	zip -ru $(ARCHIVE) D2.1-Technology-Demonstrators.docx
+
+archive: git-archive
 	zip -ru $(ARCHIVE) D2.1-Technology-Demonstrators.pdf
+	zip -ru $(ARCHIVE) D2.1-Technology-Demonstrators.docx
+	mv $(ARCHIVE) ..
 
 .PHONY : info
 info:
@@ -38,12 +41,6 @@ info:
 	@echo $(PDF)
 	@echo $(HTML)
 	@echo $(DOCX)
-
-
-.PHONY : watch
-watch:
-	@echo ------ Building on file changes -----
-	@ls *.md | entr make acm
 
 .PHONY : all
 all : $(HTML) $(PDF) $(DOCX) $(ARCHIVE)
